@@ -7,6 +7,11 @@ function App() {
     setInputText(e.target.value);
   };
 
+  const handleReset = (e) => {
+    e.preventDefault();
+    setListItems([]);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setListItems([...listItems, inputText]);
@@ -27,16 +32,22 @@ function App() {
             type='text'
             id='listItem'
             value={inputText}
+            required
           />
         </div>
         <button type='submit'>Submit</button>
       </form>
       {listItems.length > 0 && (
-        <ul>
-          {listItems.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+        <>
+          <ul>
+            {listItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <button type='button' onClick={handleReset}>
+            Reset
+          </button>
+        </>
       )}
     </div>
   );
