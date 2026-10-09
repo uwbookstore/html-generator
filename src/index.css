@@ -1,9 +1,12 @@
 :root {
   --bs-primary: #c5050c;
+  --bs-black: #000000;
   --bs-white: #ffffff;
   --bs-secondary: #4d4d4d;
-  --bs-warning: #ffae00;
   --bs-success: #5cb85c;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffae00;
+  --bs-danger: #dc3545;
 
   --clr-gray-50: #f3f3f3;
   --clr-gray-100: #dedede;
@@ -86,4 +89,98 @@ body {
 .merchDesc ul {
   margin-block: 0 1rem;
   padding-inline-start: 2rem;
+}
+
+.callout {
+  --callout-bg: var(--bs-white);
+  --callout-clr: hsl(from var(--bs-black) h s 25%);
+  --callout-bdr: hsl(from var(--bs-black) h s 85%);
+  --callout-bdr-rad: 4px;
+
+  border-radius: var(--callout-bdr-rad);
+  background: var(--callout-bg);
+  color: var(--callout-clr);
+  border: 1px solid var(--callout-bdr);
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.45;
+  max-inline-size: fit-content;
+}
+
+.callout-light {
+  --callout-bg: hsl(from var(--bs-black) h s 98%);
+  --callout-bdr: hsl(from var(--bs-black) h s 92%);
+  --callout-clr: hsl(from var(--bs-black) h s 10%);
+}
+
+.callout-dark {
+  --callout-bg: hsl(from var(--bs-black) h s 78%);
+  --callout-bdr: hsl(from var(--bs-black) h s 72%);
+  --callout-clr: hsl(from var(--bs-black) h s 10%);
+}
+
+.callout-success {
+  --callout-bg: hsl(from var(--bs-success) h s 92%);
+  --callout-bdr: hsl(from var(--bs-success) h s 85%);
+  --callout-clr: hsl(from var(--bs-success) h s 28%);
+}
+
+.callout-info {
+  --callout-bg: hsl(from var(--bs-info) h s 92%);
+  --callout-bdr: hsl(from var(--bs-info) h s 85%);
+  --callout-clr: hsl(from var(--bs-info) h s 28%);
+}
+
+.callout-warning {
+  --callout-bg: hsl(from var(--bs-warning) h s 92%);
+  --callout-bdr: hsl(from var(--bs-warning) h s 85%);
+  --callout-clr: hsl(from var(--bs-warning) h s 22%);
+}
+
+.callout-danger {
+  --callout-bg: hsl(from var(--bs-danger) h s 92%);
+  --callout-bdr: hsl(from var(--bs-danger) h s 85%);
+  --callout-clr: hsl(from var(--bs-danger) h s 40%);
+}
+
+.callout.center {
+  margin-inline: auto;
+}
+
+.prose {
+  max-inline-size: 60ch;
+}
+
+.prose > * + * {
+  margin-block-start: 20px;
+}
+
+.form-group {
+  display: grid;
+}
+
+button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  border: none;
+  border-radius: 4px;
+
+  &:hover {
+    background: hsl(from var(--bs-primary) h s 30%);
+  }
+}
+
+.form-group {
+  label {
+    margin-block-end: 15px;
+  }
+  input {
+    padding: 0.5rem 1rem;
+  }
 }
