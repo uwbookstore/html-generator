@@ -1,0 +1,89 @@
+:root {
+  --bs-primary: #c5050c;
+  --bs-white: #ffffff;
+  --bs-secondary: #4d4d4d;
+  --bs-warning: #ffae00;
+  --bs-success: #5cb85c;
+
+  --clr-gray-50: #f3f3f3;
+  --clr-gray-100: #dedede;
+  --clr-gray-200: #cacaca;
+  --clr-gray-300: #b5b5b5;
+  --clr-gray-400: #a0a0a0;
+  --clr-gray-500: #8c8c8c;
+  --clr-gray-600: #777777;
+  --clr-gray-700: #626262;
+  --clr-gray-800: #4e4e4e;
+  --clr-gray-900: #393939;
+
+  --clr-disabled: #969696;
+
+  /* Font-family */
+  --ff-primary: 'Red Hat Text', sans-serif;
+  --ff-secondary: 'Red Hat Display', sans-serif;
+}
+
+/* CSS Demystified Reset | v0.2 */
+
+/* prevent layout shifts on short pages
+   and long-term improvement for 100vw */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Make the line-height more reader friendly */
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Set tighter line heights on headings & interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Make it so replaced elements are responsive */
+img,
+video,
+iframe {
+  display: block;
+  block-size: auto;
+  max-inline-size: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* also prevents zoom on iOS if font sizes are small */
+button,
+select,
+textarea,
+input {
+  font: inherit;
+  font-size: max(16px, 1em);
+}
+
+/* Harry Roberts @csswizardry img reset
+   https://x.com/csswizardry/status/1717841334462005661 */
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.merchDesc ul {
+  margin-block: 0 1rem;
+  padding-inline-start: 2rem;
+}
